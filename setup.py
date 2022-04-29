@@ -35,7 +35,7 @@ setup(
         'Topic :: Software Development :: Libraries',
     ],
     install_requires=[
-        'PyYAML==6.0'
+        'PyYAML>=6.0'
     ],
     include_package_data=True,
 )
