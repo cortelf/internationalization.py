@@ -35,18 +35,18 @@ hello_world: Ciao mondo!
 ```
 #### In root of your app initialize singleton
 ```python
-from internationalization import Localization
+from internationalization import Internationalization
 
-localization = Localization("yourappdomain", "yourdirectory")
-localization.initialize()
+i18n = Internationalization("yourappdomain", "yourdirectory")
+i18n.initialize()
 ```
 #### It's ready to use in any place
 ```python
-from internationalization import Localization
+from internationalization import Internationalization
 
-localization = Localization("yourappdomain", "yourdirectory")
-english = localization.get_language("en")
-italian = localization.get_language("it")
+i18n = Internationalization("yourappdomain", "yourdirectory")
+english = i18n.get_language("en")
+italian = i18n.get_language("it")
 
 print("English:", english.hello_world)
 print("Italian:", italian.hello_world)
