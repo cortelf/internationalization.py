@@ -9,18 +9,18 @@ def get_description():
 
 setup(
     name='internationalization.py',
-    version="0.0.1",
+    version="0.0.2",
     url='https://github.com/cortelf/internationalization.py',
     license='MIT',
     author='CortelF',
-    python_requires='>=3.7',
+    python_requires='>=3.6',
     description='Internationalization library for comfortable usage',
     long_description=get_description(),
     long_description_content_type="text/markdown",
     project_urls={
         "Bug Tracker": "https://github.com/cortelf/internationalization.py/issues",
     },
-    package_dir={"": "internationalization"},
+    packages=["internationalization"],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',

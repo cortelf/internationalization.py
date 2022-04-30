@@ -37,14 +37,14 @@ hello_world: Ciao mondo!
 ```python
 from internationalization import Localization
 
-localization = Localization("yourappdomain", "locales")
+localization = Localization("yourappdomain", "yourdirectory")
 localization.initialize()
 ```
 #### It's ready to use in any place
 ```python
 from internationalization import Localization
 
-localization = Localization("yourappdomain", "locales")
+localization = Localization("yourappdomain", "yourdirectory")
 english = localization.get_language("en")
 italian = localization.get_language("it")
 

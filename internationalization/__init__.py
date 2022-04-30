@@ -1,2 +1,2 @@
-from .localiztion import Localization
+from .internationalization import Internationalization
 from .language import Language

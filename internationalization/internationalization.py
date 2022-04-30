@@ -11,14 +11,14 @@ import yaml
 
 
 @dataclass(frozen=True)
-class LocalizationFile:
+class InternationalizationFile:
     name: str
     path: Path
     domain: str
     languages: List[str]
 
 
-class Localization(metaclass=Singleton):
+class Internationalization(metaclass=Singleton):
     @property
     def data(self) -> dict[str, Any]:
         if self.__data is None:
@@ -39,13 +39,13 @@ class Localization(metaclass=Singleton):
 
         self.__data = None
 
-    def __read_files_from_directory(self) -> List[LocalizationFile]:
-        need_files: List[LocalizationFile] = []
+    def __read_files_from_directory(self) -> List[InternationalizationFile]:
+        need_files: List[InternationalizationFile] = []
 
         for item in os.listdir(self.__locales_dir):
             dot_split = item.split(".")
             if len(dot_split) > 2 and dot_split[0] == self.__domain and dot_split[-1] in ["yaml", "yml"]:
-                need_files.append(LocalizationFile(
+                need_files.append(InternationalizationFile(
                     name=item,
                     domain=self.__domain,
                     path=self.__locales_dir / item,
@@ -54,7 +54,7 @@ class Localization(metaclass=Singleton):
 
         return need_files
 
-    def __load_language_file(self, f: LocalizationFile):
+    def __load_language_file(self, f: InternationalizationFile):
         with open(f.path, 'r', encoding="utf-8") as stream:
             md = yaml.safe_load(stream)
 

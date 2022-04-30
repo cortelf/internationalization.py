@@ -1,11 +1,11 @@
-from internationalization import Localization
+from internationalization import Internationalization
 
-localization = Localization("example", "locales")
-localization.initialize()
+i18n = Internationalization("example", "locales")
+i18n.initialize()
 
-english = localization.get_language("en")
-italian = localization.get_language("it")
-spanish = localization.get_language("es")
+english = i18n.get_language("en")
+italian = i18n.get_language("it")
+spanish = i18n.get_language("es")
 
 print("English:", english.hello_world)
 print("Italian:", italian.hello_world)
