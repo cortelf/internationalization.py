@@ -22,13 +22,13 @@ mkdir yourdirectory
 #### Write your yaml files
 You can use .yml or .yaml file extensions
 ```shell
-yourappdomain.en.yml
+en.yml
 ```
 ```yaml
 hello_world: Hello World!
 ```
 ```shell
-yourappdomain.it.yml
+it.yml
 ```
 ```yaml
 hello_world: Ciao mondo!
@@ -36,15 +36,16 @@ hello_world: Ciao mondo!
 #### In root of your app initialize singleton
 ```python
 from internationalization import Internationalization
+from internationalization.loaders import YAMLLoader
 
-i18n = Internationalization("yourappdomain", "yourdirectory")
-i18n.initialize()
+i18n = Internationalization()
+i18n.initialize(YAMLLoader("yourdirectory"))
 ```
 #### It's ready to use in any place
 ```python
 from internationalization import Internationalization
 
-i18n = Internationalization("yourappdomain", "yourdirectory")
+i18n = Internationalization()
 english = i18n.get_language("en")
 italian = i18n.get_language("it")
 
