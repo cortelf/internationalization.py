@@ -34,10 +34,3 @@ class Internationalization(metaclass=Singleton):
             raise LanguageNotPresentError()
 
         return self.data[name]
-
-
-
-
-
-
-
