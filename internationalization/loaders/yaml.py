@@ -1,6 +1,6 @@
 from typing import List
 
-from types import Phrase
+from ..types import Phrase
 from . import FilesPackLoader
 import yaml
 

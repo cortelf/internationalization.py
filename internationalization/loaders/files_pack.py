@@ -3,7 +3,7 @@ from os import PathLike
 from pathlib import Path
 from typing import Union, Optional, List
 
-from types import FullLanguage, PathFile, Phrase
+from ..types import FullLanguage, PathFile, Phrase
 from .base_loader import BaseLoader
 
 
@@ -16,9 +16,7 @@ class FilesPackLoader(BaseLoader, ABC):
     def allowed_extensions(self) -> List[str]:
         ...
 
-    def __init__(self, directory:  Union[str, PathLike], domain: Optional[str] = None):
-        if not isinstance(directory, str) or not isinstance(directory, PathLike):
-            raise TypeError(f"{directory} must be path or str")
+    def __init__(self, directory:  Union[str, PathLike[str]], domain: Optional[str] = None):
         path_directory = Path(directory)
 
         if not path_directory.exists() or not path_directory.is_dir():

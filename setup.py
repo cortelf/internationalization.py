@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from setuptools import find_packages, setup
+from setuptools import setup
 
 
 def get_description():
@@ -9,7 +9,7 @@ def get_description():
 
 setup(
     name='internationalization.py',
-    version="0.0.2",
+    version="0.1.0",
     url='https://github.com/cortelf/internationalization.py',
     license='MIT',
     author='CortelF',
@@ -20,7 +20,7 @@ setup(
     project_urls={
         "Bug Tracker": "https://github.com/cortelf/internationalization.py/issues",
     },
-    packages=["internationalization"],
+    packages=["internationalization", "internationalization.loaders", "internationalization.types"],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',

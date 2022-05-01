@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List
-from types import FullLanguage
+from ..types import FullLanguage
 
 
 class BaseLoader(ABC):

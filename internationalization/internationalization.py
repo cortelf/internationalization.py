@@ -1,6 +1,6 @@
 from typing import List, Any
 
-from loaders import BaseLoader
+from .loaders import BaseLoader
 from .language import Language
 from .singleton import Singleton
 from .exceptions import DataNotInitializedError, LanguageNotPresentError

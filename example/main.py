@@ -1,7 +1,8 @@
 from internationalization import Internationalization
+from internationalization.loaders import YAMLLoader
 
-i18n = Internationalization("example", "locales")
-i18n.initialize()
+i18n = Internationalization()
+i18n.initialize(YAMLLoader(directory="locales"))
 
 english = i18n.get_language("en")
 italian = i18n.get_language("it")
