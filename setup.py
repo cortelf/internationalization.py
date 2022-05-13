@@ -9,7 +9,7 @@ def get_description():
 
 setup(
     name='internationalization.py',
-    version="0.1.0",
+    version="0.1.1",
     url='https://github.com/cortelf/internationalization.py',
     license='MIT',
     author='CortelF',
